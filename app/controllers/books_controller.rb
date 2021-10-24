@@ -2,7 +2,6 @@ class BooksController < ApplicationController
   before_action :ensure_current_user, only: [:edit, :update, :destroy]
 
   def show
-    @user = current_user
     @book_new = Book.new
     @book = Book.find(params[:id])
   end
