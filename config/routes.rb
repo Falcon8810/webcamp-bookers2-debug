@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     resource :favorites, only: [:create, :destroy]
   end
 
-  resources :users,only: [:show,:index,:edit,:update]
+  resources :users,only: [:show,:index,:edit,:update] do
+    resource :relationships, only: [:create, :destroy]
+  end
 
 end
