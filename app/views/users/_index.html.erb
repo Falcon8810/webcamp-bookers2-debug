@@ -14,5 +14,7 @@
         <td><%= link_to 'Show', user_path(user), class: "user_#{user.id}" %></td>
       </tr>
     <% end %>
+
+    <td>フォロー数：<%= current_user.follower.count %></td>
   </tbody>
 </table>
