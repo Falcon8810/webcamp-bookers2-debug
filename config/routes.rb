@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'homes#top'
   get 'home/about', to: 'homes#about'
-  get '/search', to: 'searchs#search', as: 'search'
+  get '/search', to: 'searches#search', as: 'search'
 
   resources :books, only: [:index, :show, :edit, :create, :destroy, :update] do
     resources :book_comments, only: [:create, :destroy]
