@@ -1,3 +1,4 @@
-$('#comment_area').html("<%= escape_javascript(render 'book_comments/comment_index', book: @book) %>");
-$('#comment_form').html("<%= escape_javascript(render 'book_comments/comment_form', book: @book, comment: @book_comment) %>");
-$("textarea").val('')
+$("#book_<%= @book.id %> .comments_count").html("コメント数：<%= @book.book_comments.count %>");
+$("#comment_area").html("<%= escape_javascript(render 'book_comments/comment_index', book: @book) %>");
+$("#comment_form").html("<%= escape_javascript(render 'book_comments/comment_form', book: @book, comment: @book_comment_new) %>");
+$("#book_comment_comment").val("")
