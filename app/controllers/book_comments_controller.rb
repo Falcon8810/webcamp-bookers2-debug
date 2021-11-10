@@ -12,7 +12,6 @@ class BookCommentsController < ApplicationController
     #この９行目を追加することで実装が可能に
     
     if @book_comment.save
-      # redirect_to book_path(@book.id)
     else
       @user = @book.user
       render "books/show"
@@ -23,7 +22,6 @@ class BookCommentsController < ApplicationController
     @book = Book.find(params[:book_id])
     book_comment = @book.book_comments.find(params[:id])
     book_comment.destroy
-    # redirect_to request.referrer
   end
 
   private
