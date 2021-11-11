@@ -10,6 +10,7 @@ class BookCommentsController < ApplicationController
     #９行目自分で考えた。
     #book_comments/create.js.erbの3行目の記述も必要ないが、
     #この９行目を追加することで実装が可能に
+    #こういう発見がすごく大事
     
     if @book_comment.save
     else
